@@ -31,10 +31,10 @@ E para ativar a api é preciso realizar um 'npm run backend' no terminal.
 - GIT
 - GitHub
 
-- 
+  
 <br>
 <br>
-## <h2 align="center"> Observações<br></h2>
+ <h2 align="center"> Observações<br></h2>
 
 
 Durante a entrevista conversamos sobre a minha facilidade maior com CSS e HTML, onde aprendi JavaScript puro para introduzir o React no meu leque de conhecimento.
