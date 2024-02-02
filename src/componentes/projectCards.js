@@ -4,12 +4,14 @@ import "./projectsStyle.css";
 import PropTypes from "prop-types";
 import { BsPencil, BsFillTrashFill } from "react-icons/bs";
 
+// Nesta function foi criada a estrutura dos cards, para exposição dos dados inseridos.
+// Nele também encontramos a opção de editar e excluir.
+
 function ProjectCard({
   id,
   name,
   Barras,
   handleRemove,
-  handleEdit,
   Geradores,
   Linhas,
   Transformadores,
@@ -22,9 +24,6 @@ function ProjectCard({
     <div className="project_card">
       <h4>{name}</h4>
       <div className="dados">
-        <p>
-          <span>ID: {id}</span>
-        </p>
         <p>
           <span>Barras: {Barras || "Sem valor"}</span>
         </p>

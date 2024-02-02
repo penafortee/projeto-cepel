@@ -6,27 +6,10 @@ import SubmitButton from "./form/SubmitButton";
 import ProjectCard from "./projectCards";
 
 function DadosForm({ handleSubmit, btnText, projectData }) {
-  const [tipoDados, setTipoDados] = useState([]);
   const [project, setProject] = useState(projectData || {});
   const [projectsCard, setProjectsCard] = useState([]);
 
-  // fetch para adicionar novos dados.
-  useEffect(() => {
-    fetch("http://localhost:5000/TipoDados", {
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-    })
-      .then((resp) => resp.json())
-      .then((data) => {
-        setTipoDados(data);
-      })
-      .catch((err) => console.log(err));
-  }, []);
-
   //fetch para mostrar os projects no card
-
   useEffect(() => {
     fetch("http://localhost:5000/Projects", {
       method: "GET",
@@ -50,6 +33,7 @@ function DadosForm({ handleSubmit, btnText, projectData }) {
     setProject({ ...project, [e.target.name]: e.target.value });
   }
 
+  // fetch para deletar os dados
   function removeProject(id) {
     fetch(`http://localhost:5000/Projects/${id}`, {
       method: "DELETE",
@@ -63,18 +47,15 @@ function DadosForm({ handleSubmit, btnText, projectData }) {
       .catch((err) => console.log(err));
   }
 
+  // Neste return eu adicionei alguns inputs, para criar a estrutura do 'formulário',
+  // onde adicionamos novos dados para serem criados os cards de 'projetos'.
+
+  // Na '<div className="card_dados">' eu trouxe 'projectCards.js', para que pudesse a baixo do conteúdo inserido,
+  // visualizar os projetos já inseridos.
+
   return (
     <div className="dados-finais">
       <form onSubmit={submit} className="form">
-        <Input
-          key="id"
-          type="number"
-          text="Id Projeto"
-          name="id"
-          placeholder="Insira o dado"
-          handleOnChange={handleChange}
-          value={project.id ? project.id : ""}
-        />
         <Input
           key="NomeProjetoInput"
           type="text"

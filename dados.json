@@ -9,6 +9,16 @@
       "Transformadores": "123",
       "cost": 0,
       "services": []
+    },
+    {
+      "id": "123",
+      "name": "123",
+      "Barras": "321",
+      "Linhas": "321",
+      "Geradores": "312",
+      "Transformadores": "312",
+      "cost": 0,
+      "services": []
     }
   ],
   "TipoDados": [

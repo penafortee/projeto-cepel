@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import DadosForm from "./DadosForm";
 import "./FormStyle.css";
 
+// para criar um novo projeto, ou seja, inserir novos dados.
+
 function NewProject() {
   const history = useState();
 
   function createPost(project) {
-    // iniciar o cost and services
     project.cost = 0;
     project.services = [];
 
@@ -20,7 +21,6 @@ function NewProject() {
       .then((resp) => resp.json())
       .then((data) => {
         console.log(data);
-        //redirect posterior
         history.pushState("../componentes/form/projects.js", {
           message: "Projeto criado com sucesso!",
         });
