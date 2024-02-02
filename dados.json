@@ -1,0 +1,32 @@
+{
+  "Projects": [
+    {
+      "id": "1111",
+      "name": "TESTE 2",
+      "Barras": "2131",
+      "Linhas": "321",
+      "Geradores": "132",
+      "Transformadores": "123",
+      "cost": 0,
+      "services": []
+    }
+  ],
+  "TipoDados": [
+    {
+      "id": "1",
+      "name": "Barras"
+    },
+    {
+      "id": "2",
+      "name": "Linhas"
+    },
+    {
+      "id": "3",
+      "name": "Geradores"
+    },
+    {
+      "id": "4",
+      "name": "Transformadores"
+    }
+  ]
+}

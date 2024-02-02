@@ -1,0 +1,15 @@
+.btn {
+  background-color: #fff;
+  border-color: #ffbb33;
+  color: #ec53ec;
+  border-radius: 10px;
+  padding: 0.7em 1.2em;
+  text-decoration: none;
+  transition: 0.5s;
+  cursor: pointer;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.btn:hover {
+  color: #ffbb33;
+}
